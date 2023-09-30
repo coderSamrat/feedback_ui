@@ -46,6 +46,7 @@ function updateResponsiveStyles() {
         box.style.textAlign = "center";
         box.style.color = "#fd1d1d";
         box.style.transition = "color 0.3s";
+        box.style.overflow= "hidden";
     });
     const mediaQuery = window.matchMedia("(max-width: 768px)");
     if (mediaQuery.matches) {

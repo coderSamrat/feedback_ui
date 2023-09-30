@@ -11,6 +11,7 @@ body {
   background-position: center;
   font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
     sans-serif;
+  overflow: hidden;
 }
 .container {
   width: 100%;
