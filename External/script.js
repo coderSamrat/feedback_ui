@@ -2,9 +2,7 @@ const stars = document.querySelectorAll(".fa-solid");
 const emoji = document.getElementById("emoji");
 const feedbackBoxes = document.querySelectorAll(".feedbackbox");
 const btn = document.querySelector(".btn");
-
 let starsClicked = false;
-
 function resetStarsAndEmoji() {
     stars.forEach((star, index) => {
         star.style.color = "#e4e4e4";
@@ -12,7 +10,6 @@ function resetStarsAndEmoji() {
     emoji.style.transform = `translateX(-${100 * stars.length}px)`;
     emoji.style.opacity = 0;
 }
-
 function handleStarClick(index) {
     resetStarsAndEmoji();
 
@@ -21,18 +18,15 @@ function handleStarClick(index) {
             star.style.color = "#ffd93b";
         }
     });
-
     starsClicked = true;
     emoji.style.opacity = 1;
     emoji.style.transform = `translateX(-${100 * (stars.length - 1 - index)}px)`;
 }
-
 stars.forEach((star, index) => {
     star.onclick = () => {
         handleStarClick(index);
     };
 });
-
 btn.onclick = function () {
     if (starsClicked) {
         const starRating = Array.from(stars).filter(star => star.style.color === 'rgb(255, 217, 59)').length;
@@ -44,7 +38,6 @@ btn.onclick = function () {
         alert("Please select a star rating first.");
     }
 };
-
 function updateResponsiveStyles() {
     feedbackBoxes.forEach((box) => {
         box.style.fontSize = "24px";
@@ -54,7 +47,6 @@ function updateResponsiveStyles() {
         box.style.color = "#fd1d1d";
         box.style.transition = "color 0.3s";
     });
-
     const mediaQuery = window.matchMedia("(max-width: 768px)");
     if (mediaQuery.matches) {
         feedbackBoxes.forEach((box) => {
@@ -64,9 +56,7 @@ function updateResponsiveStyles() {
         });
     }
 }
-
 window.addEventListener("load", updateResponsiveStyles);
 window.addEventListener("resize", updateResponsiveStyles);
 updateResponsiveStyles();
-
 resetStarsAndEmoji();

@@ -19,18 +19,15 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .heading {
   text-align: center;
 }
-
 h1 {
   font-size: 25px;
   letter-spacing: 3px;
   margin: 0;
   color: #000 !important;
 }
-
 .feedbackbox {
   width: 90%;
   max-width: 300px;
@@ -105,29 +102,23 @@ h1 {
 .btn:active {
   transform: scale(0.8);
 }
-
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 35px;
   }
-
   .feedbackbox {
     max-width: 400px;
   }
-
   .emoji {
     width: 100px;
     height: 100px;
   }
-
   .emoji img {
     width: 80px;
   }
-
   .ratings .fa-solid {
     font-size: 3rem;
   }
-
   .btn {
     font-size: 1.5rem;
   }
